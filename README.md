@@ -53,14 +53,14 @@ While This is more expensive than OpenAI APIs, it retains complete control over 
 ## 0 - Quickstart
 
 To deploy in your environment:
-
+0. Fork this
 1. Activate Python Env `source .venv/bin/activate && pip install -r requirements.txt`
 2. Create a `.env` file (base off [.env.template](./.env.template)) 
-3. Add your AWS credentials
+3. Add your AWS credentials (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`)
 4. Execute `chmod +x ./run.sh`
 5. Execute [./run.sh](./run.sh)
 
-There is also a template for a GitHub action under [./.github/workflows](./.github/workflows/deploy.yml).
+There is also a template for a GitHub action under [./.github/workflows](./.github/workflows/deploy.yml). If you are using actions make sure you have added your AWS credentials to the actions workflow secrets of this repo. 
 
 Modify [auth](./src/auth/lambda_function.py) first to define how to secure your API.
 
