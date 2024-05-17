@@ -40,7 +40,7 @@ Estimate of cost-per-query:
 
 While This is more expensive than OpenAI APIs, it retains complete control over infrastructure. We are also currently working to optimize this to approach API pricing.
 
-TODO: Publish paper, fix outstanding deployment bug
+[we are publishing a paper with all our results and design rationale]
 
 0. [Quickstart](#0---quickstart)
 1. [Example](#1---example)
