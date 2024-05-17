@@ -1,10 +1,9 @@
-# Valyu LLManager - Simplifying MLOps for Self-Hosted LLM Inference
+# Valyu LLManager - Simplifying MLOps for Self-Hosted LLM Inference 🛠️
+As an LLM application developer managing infrastructure, permissions and security for the complete LLM stack (embeddings models, vector databases, LLMs, caching, logging, api-endpoints etc.) can get very complex and costly. This is even before you deploy you start building out your actual application. 
 
-IN PROGRESS...
+We recognised this when we started building scalable LLM applications. Deploying complete, maintainable high-performance Large Language Models applications was cumbersome. So we built the Valyu LLM Manager 🛠️
 
-Deploying complete and maintainable high-performance Large Language Models on AWS is a complex and costly endeavor. Managing infrastructure, permissions and security for not only an LLM, but also Vector databases and chat features leads to an explosion in cost and complexity.
-
-Valyu LLManager reigns in this cost and complexity, easing the strain on development and operations teams when maintaining models. A handful of API calls can create or destroy model instances and supporting resources, with autoscaling, including scaling to zero, and support for Mistal models, Llama-3 models as well as custom-trained solutions.
+Valyu LLManager reigns in this cost and complexity, easing the strain on development and operations teams when maintaining models. A handful of API calls can create or destroy model instances and supporting resources, with autoscaling, including scaling to zero, and support for Mistal models, Llama-3 models, embeddings models as well as custom-trained solutions. It is very AWS centric atm but we are making it agnostic :)
 
 Scale immediately, with complete control over your models, while paying only for what you actually use.
 
@@ -12,7 +11,7 @@ This is designed to be deployed in your AWS environment, using CDK. This allows 
 
 ### Pricing Benchmarks
 
-These are being refined.
+(These are being refined as we optimise more)
 
 Total Cost Estimates:
 
@@ -75,7 +74,7 @@ You must setup and deploy an API first, as well as update the API URL in that fu
 
 To create an LLM instance, embedding model and vector database is as simple as:
 
-```
+```python
 requests.post(f"{api_url}/model/create", json={"name": llm_name, "model": "mistral-7b"})
 
 requests.post(f"{api_url}/model/create", json={"name": embed_name, "model": "gte-large"})
@@ -87,7 +86,7 @@ requests.post(f"{api_url}/vdb/create", json={"name": vdb_name})
 
 To chat with the LLM, while querying data from the vector database, only requires one API call for each high-level action:
 
-```
+```python
 response = requests.post(f"{api_url}/vdb/query", json={"model": embed_name, "query": query, "name": vdb_name})
 
 vdb_data = response['data']
@@ -105,7 +104,7 @@ chat_id = response.json()["chat_id"]
 
 To continue a chat, simply pass the chat ID to the API:
 
-```
+```python
 response = requests.post(f"{api_url}/history/get", json={"chat_id": chat_id})
 
 chat_data = response.json()
@@ -125,7 +124,7 @@ requests.post(f"{api_url}/history/append", json={"q": query, "a": answer, "chat_
 
 When you're done using your models, they may either be configured to automatically delete, or may be deleted manually:
 
-```
+```python
 requests.post(f"{api_url}/model/delete", json={"name": llm_name})
 
 requests.post(f"{api_url}/model/delete", json={"name": embed_name})
@@ -212,3 +211,5 @@ API Arguments to be finalized, but endpoints include:
 - Squash & Merge Only for PRs
 - All PRs must be reviewed before being merged
 - Be sensible :)
+
+🛠️ We Build
