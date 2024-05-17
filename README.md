@@ -1,13 +1,13 @@
 # Valyu LLManager - Simplifying MLOps for Self-Hosted LLM Inference 🛠️
-As an LLM application developer managing infrastructure, permissions and security for the complete LLM stack (embeddings models, vector databases, LLMs, caching, logging, api-endpoints etc.) can get very complex and costly. This is even before you deploy you start building out your actual application. 
+As an LLM application developer, managing infrastructure, permissions and security for the entire LLM stack (embeddings models, vector databases, LLMs, caching, logging, api-endpoints etc.) can get very complex and costly. This is even before you start building out your actual application level logic. 
 
 We recognised this when we started building scalable LLM applications. Deploying complete, maintainable high-performance Large Language Models applications was cumbersome. So we built the Valyu LLM Manager 🛠️
 
-Valyu LLManager reigns in this cost and complexity, easing the strain on development and operations teams when maintaining models. A handful of API calls can create or destroy model instances and supporting resources, with autoscaling, including scaling to zero, and support for Mistal models, Llama-3 models, embeddings models as well as custom-trained solutions. It is very AWS centric atm but we are making it agnostic :)
+Valyu LLManager reigns in this cost and complexity, easing the strain on your development and operations teams when building applications. It is easy- you can create or destroy entire model instances and supporting resources (vector databases, embeddings models etc.), with autoscaling, including scaling to zero. It supports any open-source LLM (Mistral, Llama3 etc.), any embeddings models on the `MTEB` keaderboard as well as custom-trained solutions. It is AWS centric atm but we are making it agnostic :)
 
-Scale immediately, with complete control over your models, while paying only for what you actually use.
+Scale immediately, with complete control over your model infrastructure, while paying only for what you actually use.
 
-This is designed to be deployed in your AWS environment, using CDK. This allows users to retain complete control and easily modify the framework, according to their needs.
+You can retain complete control over your infrastructure and easily modify the framework, according to your needs.
 
 ### Pricing Benchmarks
 
