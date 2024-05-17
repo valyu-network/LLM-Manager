@@ -206,6 +206,9 @@ API Arguments to be finalized, but endpoints include:
 
 ## 6 - Contribution
 
+Shoutout to the 🐐 [@jl3nn](https://github.com/jl3nn) for building this.
+
+**Guidelines**
 - Use a new branch
 - Create a PR, with a semantic name
 - Squash & Merge Only for PRs
