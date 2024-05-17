@@ -60,7 +60,7 @@ To deploy in your environment:
 4. Execute `chmod +x ./run.sh`
 5. Execute [./run.sh](./run.sh)
 
-There is also a template for a GitHub action under [./.github/workflows](./.github/workflows/deploy.yaml).
+There is also a template for a GitHub action under [./.github/workflows](./.github/workflows/deploy.yml).
 
 Modify [auth](./src/auth/lambda_function.py) first to define how to secure your API.
 
