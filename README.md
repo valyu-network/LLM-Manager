@@ -1,9 +1,9 @@
-# Valyu LLManager - Simplifying MLOps for Self-Hosted LLM Inference 🛠️
+# Stitch - Simplifying MLOps for Self-Hosted LLM Inference 🛠️
 As an LLM application developer, managing infrastructure, permissions and security for the entire LLM stack (embeddings models, vector databases, LLMs, caching, logging, api-endpoints etc.) can get very complex and costly. This is even before you start building out your actual application level logic. 
 
-We recognised this when we started building scalable LLM applications as part of our internal tooling. Deploying complete, maintainable high-performance Large Language Models applications was cumbersome. So we built the Valyu LLM Manager 🛠️
+We recognised this when we started building scalable LLM applications as part of our internal tooling. Deploying complete, maintainable high-performance Large Language Models applications was cumbersome. So we built the Stitch 🛠️
 
-Valyu LLManager reigns in this cost and complexity, easing the strain on your development and operations teams when building applications. It is easy- you can create or destroy entire model instances and supporting resources (vector databases, embeddings models etc.), with autoscaling, including scaling to zero. It supports any open-source LLM (Mistral, Llama3 etc.), any embeddings models on the `MTEB` keaderboard as well as custom-trained solutions. It is AWS centric atm but we are making it agnostic :)
+Stitch reigns in this cost and complexity, easing the strain on your development and operations teams when building applications. It is easy- you can create or destroy entire model instances and supporting resources (vector databases, embeddings models etc.), with autoscaling, including scaling to zero. It supports any open-source LLM (Mistral, Llama3 etc.), any embeddings models on the `MTEB` keaderboard as well as custom-trained solutions. It is AWS centric atm but we are making it agnostic :)
 
 Scale immediately, with complete control over your model infrastructure, while paying only for what you actually use.
 
@@ -140,7 +140,7 @@ Many deployments of LLM's require complex resources, such as vector databases, s
 
 ![System including vector DB, chat history, embedding model and LLM](./media/LLM%20Architecture.drawio.png)
 
-The Valyu LLManager creates an API to abstract the operational complexity of managing all of these components, by creating, scaling, managing and deleting the relevant AWS resources for these complex systems.
+Stitch creates an API to abstract the operational complexity of managing all of these components, by creating, scaling, managing and deleting the relevant AWS resources for these complex systems.
 
 Another prohibitive factor is often cost and as such, resources created by Valyu's LLManager can be set up to be automatically deleted after some period of time if inactive.
 
